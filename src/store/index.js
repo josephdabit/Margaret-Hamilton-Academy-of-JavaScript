@@ -3,9 +3,13 @@
 */
 import { configureStore } from '@reduxjs/toolkit';
 import studentsSlice from '../redux/studentsSlice';
+import campusesSlice from '../redux/campusesSlice';
 
 const store = configureStore({
-  reducer: studentsSlice
-})
+  reducer: {
+    studentsSlice: studentsSlice,
+    campusesSlice: campusesSlice
+  }
+});
 
 export default store

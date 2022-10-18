@@ -8,7 +8,7 @@ const seed = async () => {
     //Campuses
     const marsUni = await Campus.create({
       name: 'Mars University',
-      imageUrl: 'https://static.wikia.nocookie.net/enfuturama/images/a/a0/Mars_University_%28Main_Episode%29_-_4.png/revision/latest?cb=20210706123620',
+      imageUrl: 'http://frank.geekheim.de/old/archives/knowledge_brings_fear.gif',
       address: '1234 South Crater Ave. Planet Mars, PM 30001',
       description: 'This campus is out of this world. Come enjoy red deserts, blistering heat, and a whole lot of nothing; now with more life! This campus will teach all things you need to know to work for a prestigious delivery company.'
     });

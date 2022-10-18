@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
-import { AllStudents } from '../components';
+import { AllStudents, AllCampuses } from '../components';
 
 const Main = () => {
   return (
@@ -9,6 +9,7 @@ const Main = () => {
         <span>
         <Link to='/'>Home</Link>
         <Link to='/students'>Students</Link>
+        <Link to='/campuses'>Campuses</Link>
         </span>
       </nav>
       <main>
@@ -17,6 +18,7 @@ const Main = () => {
       </main>
       <Routes>
         <Route path='/students' element={<AllStudents />}></Route>
+        <Route path='/campuses' element={<AllCampuses />}></Route>
       </Routes>
     </div>
   )

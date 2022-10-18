@@ -10,7 +10,7 @@
   
   body {
     background: linear-gradient(#ffffff, #c0c0c0);
-    height: auto;
+    height: 120vh;
     padding: 0;
     margin: 0;
     width: 100vw;
@@ -46,7 +46,24 @@
     justify-content: center;
   }
 
+  .allCampuses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   .individualStudent {
+    border: 5px double springgreen;
+    background-color: lightskyblue;
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .individualCampus {
     border: 5px double springgreen;
     background-color: lightskyblue;
     width: 300px;
@@ -58,6 +75,11 @@
   }
   
   .studentImg{
+    height: 200px;
+    width: 250px;
+  }
+
+  .campusImg{
     height: 200px;
     width: 250px;
   }

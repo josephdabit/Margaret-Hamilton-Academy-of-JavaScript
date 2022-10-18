@@ -19,4 +19,5 @@ const studentsSlice = createSlice({
     }
 });
 
-export default studentsSlice
+export const everyStudent = (state) => state.studentsSlice.students
+export default studentsSlice.reducer
