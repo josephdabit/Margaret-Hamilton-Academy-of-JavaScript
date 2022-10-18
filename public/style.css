@@ -83,3 +83,27 @@
     height: 200px;
     width: 250px;
   }
+
+  .singleCampus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+
+  .singleStudent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+
+  .singleCampusImg {
+   height: 400px;
+   width: 500px;
+  }
+
+  .singleStudentImg {
+    height: 400px;
+    width: 500px;
+   }

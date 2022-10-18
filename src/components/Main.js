@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
-import { AllStudents, AllCampuses } from '../components';
+import { AllStudents, AllCampuses, SingleCampus, SingleStudent } from '../components';
 
 const Main = () => {
   return (
@@ -18,7 +18,9 @@ const Main = () => {
       </main>
       <Routes>
         <Route path='/students' element={<AllStudents />}></Route>
+        <Route path='/students/:id' element={<SingleStudent />}></Route>
         <Route path='/campuses' element={<AllCampuses />}></Route>
+        <Route path='/campuses/:id' element={<SingleCampus />}></Route>
       </Routes>
     </div>
   )
