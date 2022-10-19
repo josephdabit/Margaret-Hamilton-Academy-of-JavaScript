@@ -20,4 +20,13 @@ router.get('/:id', async (req, res, next) => {
     }
 });
 
+// POST for /api/campuses
+router.post('/', async (req, res, next) => {
+    try {
+        res.send(await Campus.create(req.body))
+    } catch (err) {
+        next(err)
+    }
+});
+
 module.exports = router

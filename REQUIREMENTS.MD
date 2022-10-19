@@ -68,7 +68,7 @@
 <!-- - [ ] Write a route to serve up a single campus (based on its id), _including that campuses' students_ -->
 <!-- - [ ] Write a route to serve up a single student (based on their id), _including that student's campus_ -->
 
-Congrats! You have completed your second vertical slice! Make sure to `commit -m "Feature: Get Single Campus and Student"` before moving on (see RUBRIC.md - points are awarded/deducted for a proper git workflow)!
+<!-- Congrats! You have completed your second vertical slice! Make sure to `commit -m "Feature: Get Single Campus and Student"` before moving on (see RUBRIC.md - points are awarded/deducted for a proper git workflow)! -->
 
 </details>
 
@@ -93,8 +93,8 @@ Congrats! You have completed your second vertical slice! Make sure to `commit -m
 
 #### Backend
 
-- [ ] Write a route to add a new campus
-- [ ] Write a route to add a new student
+<!-- - [ ] Write a route to add a new campus -->
+<!-- - [ ] Write a route to add a new student -->
 
 Congrats! You have completed your third vertical slice! Make sure to `commit -m "Feature: Add Campus and Student"` before moving on (see RUBRIC.md - points are awarded/deducted for a proper git workflow)!
 
