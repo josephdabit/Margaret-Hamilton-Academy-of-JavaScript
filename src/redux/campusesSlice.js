@@ -15,7 +15,8 @@ const campusesSlice = createSlice({
     name: 'campusesSlice',
     initialState: {
         campuses: [],
-        campus: []
+        campus: [],
+        loading: true
     },
     reducers: {},
     extraReducers: (builder) => {
@@ -24,10 +25,12 @@ const campusesSlice = createSlice({
         });
         builder.addCase(singleCampus.fulfilled, (state, action) => {
             state.campus = action.payload;
+            state.loading = false;
         });
     }
 });
 
 export const everyCampus = (state) => state.campusesSlice.campuses
 export const oneCampus = (state) => state.campusesSlice.campus
+export const loading = (state) => state.campusesSlice.loading
 export default campusesSlice.reducer

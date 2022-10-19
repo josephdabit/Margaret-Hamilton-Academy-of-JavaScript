@@ -1,17 +1,14 @@
 import React, { useEffect } from "react";
-import { oneCampus, singleCampus } from "../redux/campusesSlice";
+import { loading, oneCampus, singleCampus } from "../redux/campusesSlice";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
-const SingleCampus = (props) => {
+const SingleCampus = () => {
 
     const onlyCampus = useSelector(oneCampus);
+    const loaded = useSelector(loading);
     const dispatch = useDispatch();
     const { id } = useParams();
-
-    const student = onlyCampus.students
-    // student.map((single) => single.campusId)
-    console.log(student);
 
     useEffect(() => {
         dispatch(singleCampus(id))
@@ -22,8 +19,8 @@ const SingleCampus = (props) => {
             <h2>Name: {onlyCampus.name}</h2>
             <h3>Description: {onlyCampus.description}</h3>
             <h3>Address: {onlyCampus.address}</h3>
-            {/* <h4>{onlyCampus.students}</h4> */}
-            {/* {console.log(onlyCampus.students)} */}
+            <h4 className="attendingStudent">Attending Students: {loaded == false ? onlyCampus.students.map((person) => (
+                <Link key={person.id} to={`/students/${person.id}`}>{person.firstName} {person.lastName}</Link>)) : <p>Still loading...</p>}</h4>
             <img className='singleCampusImg' src={onlyCampus.imageUrl} />
         </div>
     )
