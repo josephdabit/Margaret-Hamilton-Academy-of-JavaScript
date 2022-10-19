@@ -15,7 +15,8 @@ const studentsSlice = createSlice({
     name: 'studentsSlice',
     initialState: {
         students: [],
-        student: []
+        student: [],
+        loading: true
     },
     reducers: {},
     extraReducers: (builder) => {
@@ -24,10 +25,12 @@ const studentsSlice = createSlice({
         });
         builder.addCase(singleStudent.fulfilled, (state, action) => {
             state.student = action.payload;
+            state.loading = false;
         });
     }
 });
 
 export const everyStudent = (state) => state.studentsSlice.students
 export const oneStudent = (state) => state.studentsSlice.student
+export const studentLoading = (state) => state.studentsSlice.loading
 export default studentsSlice.reducer
