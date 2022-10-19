@@ -19,7 +19,7 @@ const SingleCampus = () => {
             <h2>Name: {onlyCampus.name}</h2>
             <h3>Description: {onlyCampus.description}</h3>
             <h3>Address: {onlyCampus.address}</h3>
-            <h4 className="attendingStudent">Attending Students: {((loaded == false) && (onlyCampus.students.id)) ? onlyCampus.students.map((person) => (
+            <h4 className="attendingStudent">Attending Students: {((loaded == false) && (onlyCampus.students.length !== 0)) ? onlyCampus.students.map((person) => (
                 <Link key={person.id} to={`/students/${person.id}`}>{person.firstName} {person.lastName}</Link>)) : <span>Sorry, campus has no students yet....</span>}</h4>
             <img className='singleCampusImg' src={onlyCampus.imageUrl} />
         </div>
