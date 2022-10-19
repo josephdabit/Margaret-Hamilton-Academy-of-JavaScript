@@ -1,15 +1,15 @@
 import React from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
-import { AllStudents, AllCampuses, SingleCampus, SingleStudent } from '../components';
+import { AllStudents, AllCampuses, SingleCampus, SingleStudent, AddCampus } from '../components';
 
 const Main = () => {
   return (
     <div>
       <nav>Welcome!
         <span>
-        <Link to='/'>Home</Link>
-        <Link to='/students'>Students</Link>
-        <Link to='/campuses'>Campuses</Link>
+          <Link to='/'>Home</Link>
+          <Link to='/students'>Students</Link>
+          <Link to='/campuses'>Campuses</Link>
         </span>
       </nav>
       <main>
@@ -19,7 +19,7 @@ const Main = () => {
       <Routes>
         <Route path='/students' element={<AllStudents />}></Route>
         <Route path='/students/:id' element={<SingleStudent />}></Route>
-        <Route path='/campuses' element={<AllCampuses />}></Route>
+        <Route path='/campuses' element={<> <AllCampuses /> <AddCampus /> </>}></Route>
         <Route path='/campuses/:id' element={<SingleCampus />}></Route>
       </Routes>
     </div>

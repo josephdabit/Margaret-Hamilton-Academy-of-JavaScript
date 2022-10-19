@@ -125,3 +125,19 @@
     border: 3px dashed lightskyblue;
     border-radius: 6px;
    }
+
+   .addCampus {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+   }
+
+   .addCampus label {
+    margin: 5px;
+   }
+
+   .addCampus button {
+    margin: 5px;
+    border-radius: 6px;
+    background-color: lightskyblue;
+   }

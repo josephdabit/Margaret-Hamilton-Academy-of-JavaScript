@@ -9,7 +9,12 @@ export const fetchCampuses = createAsyncThunk('fetchCampuses', async () => {
 export const singleCampus = createAsyncThunk('singleCampus', async (id) => {
     const { data } = await axios.get(`/api/campuses/${id}`);
     return data;
-})
+});
+
+export const addCampus = createAsyncThunk('addCampus', async (payload) => {
+    const { data } = await axios.post('/api/campuses', payload);
+    return data;
+});
 
 const campusesSlice = createSlice({
     name: 'campusesSlice',
@@ -26,6 +31,9 @@ const campusesSlice = createSlice({
         builder.addCase(singleCampus.fulfilled, (state, action) => {
             state.campus = action.payload;
             state.loading = false;
+        });
+        builder.addCase(addCampus.fulfilled, (state, action) => {
+            state.campuses.push(action.payload)
         });
     }
 });
