@@ -132,7 +132,17 @@
     justify-content: center;
    }
 
+   .addStudent {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+   }
+
    .addCampus label {
+    margin: 5px;
+   }
+
+   .addStudent label {
     margin: 5px;
    }
 
@@ -141,3 +151,10 @@
     border-radius: 6px;
     background-color: lightskyblue;
    }
+
+   .addStudent button {
+    margin: 5px;
+    border-radius: 6px;
+    background-color: lightskyblue;
+   }
+   

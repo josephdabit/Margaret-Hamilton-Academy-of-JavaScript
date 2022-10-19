@@ -19,7 +19,7 @@ const SingleStudent = () => {
             <h2>Name: {onlyStudent.firstName} {onlyStudent.lastName}</h2>
             <h3>Email: {onlyStudent.email}</h3>
             <h3>GPA: {onlyStudent.gpa}</h3>
-            <h4 className="attendedCampus">Campus: {studentLoaded == false ? <Link key={onlyStudent.campus.id} to={`/campuses/${onlyStudent.campus.id}`}>{onlyStudent.campus.name}</Link> : <p>Still loading...</p>}</h4>
+            <h4 className="attendedCampus">Campus: {((studentLoaded == false) && (onlyStudent.campus)) ? <Link key={onlyStudent.campus.id} to={`/campuses/${onlyStudent.campus.id}`}>{onlyStudent.campus.name}</Link> : <span>Sorry, student not yet enrolled...</span>}</h4>
             <img className='singleStudentImg' src={onlyStudent.imageUrl} />
         </div>
     )
