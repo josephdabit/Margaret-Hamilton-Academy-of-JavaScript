@@ -123,7 +123,7 @@
 <!-- - [ ] Write a route to remove a campus (based on its id) -->
 <!-- - [ ] Write a route to remove a student (based on their id) -->
 
-Congrats! You have completed your fourth vertical slice! Make sure to `commit -m "Feature: Remove Campus and Student"` before moving on (see RUBRIC.md - points are awarded/deducted for a proper git workflow)!
+<!-- Congrats! You have completed your fourth vertical slice! Make sure to `commit -m "Feature: Remove Campus and Student"` before moving on (see RUBRIC.md - points are awarded/deducted for a proper git workflow)! -->
 
 </details>
 
@@ -148,8 +148,8 @@ Congrats! You have completed your fourth vertical slice! Make sure to `commit -m
 
 #### Backend
 
-- [ ] Write a route to update an existing campus
-- [ ] Write a route to update an existing student
+<!-- - [ ] Write a route to update an existing campus -->
+<!-- - [ ] Write a route to update an existing student -->
 
 </details>
 

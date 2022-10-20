@@ -40,4 +40,15 @@ router.delete('/:id', async (req, res, next) => {
     }
 });
 
+// PUT for /api/students/:id
+router.put('/:id', async (req, res, next) => {
+    try {
+        const { id } = req.params;
+        const updateStudent = await Student.findByPk(id);
+        res.send(await updateStudent.update(req.body));
+    } catch (err) {
+        next(err)
+    }
+});
+
 module.exports = router
