@@ -10,7 +10,7 @@
   
   body {
     background: linear-gradient(#ffffff, #c0c0c0);
-    height: 130vh;
+    height: 140vh;
     padding: 0;
     margin: 0;
     width: 100vw;
@@ -158,3 +158,8 @@
     background-color: lightskyblue;
    }
    
+   .xButton {
+    margin: 3px;
+    border-radius: 6px;
+    background-color: springgreen;
+   }
