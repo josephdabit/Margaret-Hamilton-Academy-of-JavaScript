@@ -163,3 +163,35 @@
     border-radius: 6px;
     background-color: springgreen;
    }
+
+   .editCampus {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+   }
+
+   .editStudent {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+   }
+
+   .editCampus label {
+    margin: 5px;
+   }
+
+   .editStudent label {
+    margin: 5px;
+   }
+
+   .editCampus button {
+    margin: 5px;
+    border-radius: 6px;
+    background-color: lightskyblue;
+   }
+
+   .editStudent button {
+    margin: 5px;
+    border-radius: 6px;
+    background-color: lightskyblue;
+   }

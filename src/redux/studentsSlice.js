@@ -21,6 +21,17 @@ export const removeStudent = createAsyncThunk('removeStudent', async (id) => {
     return data;
 });
 
+export const updateStudent = createAsyncThunk('updateStudent', async ({ id, firstName, lastName, email, imageUrl, gpa }) => {
+    const { data } = await axios.put(`/api/students/${id}`, {
+        firstName,
+        lastName,
+        email,
+        imageUrl,
+        gpa
+    });
+    return data;
+});
+
 const studentsSlice = createSlice({
     name: 'studentsSlice',
     initialState: {
@@ -42,6 +53,9 @@ const studentsSlice = createSlice({
         });
         builder.addCase(removeStudent.fulfilled, (state, action) => {
             state.students.splice(action.payload, 1)
+        });
+        builder.addCase(updateStudent.fulfilled, (state, action) => {
+            state.student = action.payload;
         });
     }
 });

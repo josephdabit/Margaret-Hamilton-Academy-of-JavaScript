@@ -21,6 +21,16 @@ export const removeCampus = createAsyncThunk('removeCampus', async (id) => {
     return data;
 });
 
+export const updateCampus = createAsyncThunk('updateCampus', async ({ id, name, imageUrl, address, description }) => {
+    const { data } = await axios.put(`/api/campuses/${id}`, {
+        name,
+        imageUrl,
+        address,
+        description
+    });
+    return data;
+});
+
 const campusesSlice = createSlice({
     name: 'campusesSlice',
     initialState: {
@@ -42,6 +52,9 @@ const campusesSlice = createSlice({
         });
         builder.addCase(removeCampus.fulfilled, (state, action) => {
             state.campuses.splice(action.payload, 1)
+        });
+        builder.addCase(updateCampus.fulfilled, (state, action) => {
+            state.campus = action.payload;
         });
     }
 });
