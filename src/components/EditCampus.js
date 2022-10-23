@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { updateCampus } from "../redux/campusesSlice";
 import { useDispatch } from "react-redux";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const EditCampus = () => {
 
@@ -10,15 +10,12 @@ const EditCampus = () => {
     const [address, setAddress] = useState('');
     const [imageUrl, setImageUrl] = useState('');
 
-    const navigate = useNavigate();
-
     const dispatch = useDispatch();
     const { id } = useParams();
 
     const handleSubmit = async (evt) => {
         evt.preventDefault();
         await dispatch(updateCampus({ id, name, imageUrl, address, description }));
-        navigate('/campuses');
     }
   
     return (

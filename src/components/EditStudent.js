@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { updateStudent } from "../redux/studentsSlice";
 import { useDispatch } from "react-redux";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const EditStudent = () => {
 
@@ -11,15 +11,12 @@ const EditStudent = () => {
     const [gpa, setGpa] = useState(0.0);
     const [imageUrl, setImageUrl] = useState('');
 
-    const navigate = useNavigate();
-
     const dispatch = useDispatch();
     const { id } = useParams();
 
     const handleSubmit = async (evt) => {
         evt.preventDefault();
         await dispatch(updateStudent({ id, firstName, lastName, email, imageUrl, gpa }));
-        navigate('/students');
     }
   
     return (
